@@ -1,4 +1,5 @@
 using Cube.API.Data;
+using Cube.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,10 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<CubeWalksContext>(options =>
+builder.Services.AddDbContext<CubeContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("CubeCS"));
 });
+builder.Services.AddScoped<IRegionRepository, RegionRepository>();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 

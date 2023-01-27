@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cube.API.Migrations
 {
-    [DbContext(typeof(CubeWalksContext))]
-    partial class CubeWalksContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CubeContext))]
+    partial class CubeContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

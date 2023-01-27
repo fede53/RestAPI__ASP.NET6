@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cube.API.Migrations
 {
-    [DbContext(typeof(CubeWalksContext))]
+    [DbContext(typeof(CubeContext))]
     [Migration("20230126152244_InitialMigration")]
     partial class InitialMigration
     {

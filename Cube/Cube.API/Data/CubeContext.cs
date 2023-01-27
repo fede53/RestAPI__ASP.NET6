@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cube.API.Data
 {
-    public class CubeWalksContext: DbContext
+    public class CubeContext: DbContext
     {
-        public CubeWalksContext(DbContextOptions<CubeWalksContext> options): base(options) 
+        public CubeContext(DbContextOptions<CubeContext> options): base(options) 
         { 
 
         }
