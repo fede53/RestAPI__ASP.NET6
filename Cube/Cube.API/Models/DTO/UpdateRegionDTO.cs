@@ -1,15 +1,13 @@
-﻿using Cube.API.Models.Domain;
+﻿using Cube.Api.Models.Domain;
 
-namespace Cube.API.Models.DTO
+namespace Cube.Api.Models.DTO
 {
-    public class UpdateRegionDTO
+    public class UpdateWalkDTO
     {
-        public string Code { get; set; }
         public string Name { get; set; }
-        public double Area { get; set; }
-        public double Lat { get; set; }
-        public double Long { get; set; }
-        public long Population { get; set; }
+        public double Length { get; set; }
+        public Guid RegionId { get; set; }
+        public Guid WalkDifficultyId { get; set; }
 
     }
 }

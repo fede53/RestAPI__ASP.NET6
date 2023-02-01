@@ -1,4 +1,4 @@
-﻿namespace Cube.API.Models.Domain
+﻿namespace Cube.Api.Models.Domain
 {
     public class Region
     {
@@ -9,7 +9,6 @@
         public double Lat { get; set; }
         public double Long { get; set; }
         public long Population { get; set; }
-
         public IEnumerable<Walk> Walks { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Cube.API.Models.Domain
+﻿namespace Cube.Api.Models.Domain
 {
     public class WalkDifficulty
     {

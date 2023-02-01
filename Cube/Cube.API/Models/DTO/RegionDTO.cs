@@ -1,4 +1,4 @@
-﻿namespace Cube.API.Models.DTO
+﻿namespace Cube.Api.Models.DTO
 {
     public class RegionDTO
     {
@@ -9,7 +9,5 @@
         public double Lat { get; set; }
         public double Long { get; set; }
         public long Population { get; set; }
-
-        //public IEnumerable<Walk> Walks { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Cube.API.Migrations
+namespace Cube.Api.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

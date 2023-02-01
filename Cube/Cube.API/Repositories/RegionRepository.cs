@@ -1,8 +1,9 @@
-﻿using Cube.API.Data;
-using Cube.API.Models.Domain;
+﻿using Cube.Api.Data;
+using Cube.Api.Models.Domain;
+using Cube.Api.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cube.API.Repositories
+namespace Cube.Api.Repositories
 {
     public class RegionRepository : IRegionRepository
     {

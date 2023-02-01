@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
-using Cube.API.Models.Domain;
-using Cube.API.Models.DTO;
-using Cube.API.Repositories;
+using Cube.Api.Models.Domain;
+using Cube.Api.Models.DTO;
+using Cube.Api.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cube.API.Controllers
+namespace Cube.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -20,15 +21,16 @@ namespace Cube.API.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         public async Task<IActionResult> GetAll()
         {
             var regions = await regionRepository.GetAllAsync();
-            var regionsDTO = mapper.Map<List<RegionDTO>>(regions);
-            return Ok(regionsDTO);
+            return Ok(mapper.Map<List<RegionDTO>>(regions));
         }
 
         [HttpGet]
         [Route("{id:guid}")]
+        [Authorize(Roles = "writer")]
         public async Task<IActionResult> Get([FromRoute] Guid Id)
         {
             var region = await regionRepository.GetAsync(Id);
@@ -42,6 +44,7 @@ namespace Cube.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] AddRegionDTO addRegionRequest)
         {
+            //var regionModel = mapper.Map<Region>(updateRegionRequest);
             var region = new Region()
             {
                 Code = addRegionRequest.Code,

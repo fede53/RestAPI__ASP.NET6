@@ -1,6 +1,6 @@
-﻿using Cube.API.Models.Domain;
+﻿using Cube.Api.Models.Domain;
 
-namespace Cube.API.Repositories
+namespace Cube.Api.Repositories.Interfaces
 {
     public interface IRegionRepository
     {

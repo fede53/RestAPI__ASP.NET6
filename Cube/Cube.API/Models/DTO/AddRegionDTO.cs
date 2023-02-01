@@ -1,6 +1,6 @@
-﻿using Cube.API.Models.Domain;
+﻿using Cube.Api.Models.Domain;
 
-namespace Cube.API.Models.DTO
+namespace Cube.Api.Models.DTO
 {
     public class AddRegionDTO
     {
